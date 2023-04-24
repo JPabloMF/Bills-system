@@ -1,4 +1,13 @@
-.containerSignIn {
-    position: absolute;
+div.css-e53awj-MuiStack-root {
+  justify-content: center;
+  margin-top: 30px;
+}
 
+form.css-1uvzsy3 {
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+button.MuiButtonBase-root:focus{
+  outline: none;
 }

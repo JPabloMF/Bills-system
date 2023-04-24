@@ -7,7 +7,7 @@ import "../style/SignIn.css";
 
 function SignIn() {
   return (
-    <div className="containerSingIn">
+    <div className="containerSignIn">
       <Box
         component="form"
         sx={{
@@ -25,7 +25,7 @@ function SignIn() {
       </Box>
       <Stack spacing={2} direction="row">
         {" "}
-        <Button variant="contained">SIGN IN</Button>
+        <Button variant="contained">sign in</Button>
       </Stack>
     </div>
   );

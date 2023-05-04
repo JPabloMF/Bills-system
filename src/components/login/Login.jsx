@@ -2,10 +2,10 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
-import SignIn from './SignIn';
-import "../style/Login.css";
-import SignUp from "./SignUp";
-import ForgotPassword from "./ForgotPassword";
+import SignIn from "../login/SignIn";
+import SignUp from "../login/SignUp";
+import ForgotPassword from "../login/ForgotPassword";
+import "../../style/Login.css";
 
 function Login() {
   const [value, setValue] = React.useState(0);
@@ -17,12 +17,13 @@ function Login() {
   return (
     <div className="container_login">
       <Box
-        sx={{ borderBottom: 1, borderColor: "divider" }}
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        alignItems="center"
-        width="100%"
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+        }}
       >
         <Tabs
           value={value}
@@ -34,8 +35,8 @@ function Login() {
           <Tab label="forgot password?" />
         </Tabs>
         {value === 0 && <SignIn />}
-        {value === 1 && <SignUp/>}
-        {value === 2 && <ForgotPassword/>}
+        {value === 1 && <SignUp />}
+        {value === 2 && <ForgotPassword />}
       </Box>
     </div>
   );

@@ -1,0 +1,33 @@
+.containerCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiCardActionArea-root .MuiCardContent-root {
+  padding: 0;
+}
+
+.MuiTypography-h5 {
+  background-color: #00b0ff;
+  position: relative;
+}
+
+.MuiTypography-body2 {
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MuiTypography-root .MuiButton-containedSecondary {
+  position: absolute;
+  background-color: #33eb91;
+  right: 10px;
+  height: 25px;
+  top: 4px;
+}
+
+.MuiTypography-root .MuiButton-containedSecondary:hover {
+  background-color: #33eb91;
+}

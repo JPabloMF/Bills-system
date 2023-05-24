@@ -1,0 +1,8 @@
+.ContainerTable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 150px);
+  margin-left: 100px;
+  margin-top: 30px;
+}

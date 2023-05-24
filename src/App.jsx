@@ -1,6 +1,7 @@
 // import Login from "../src/components/login/Login";
 import AppDrawer from "../src/components/dashboard/AppBa";
 import Cards from "../src/components/dashboard/Cards";
+import EnhancedTable from "../src/components/dashboard/TableBills";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       {/* <Login /> */}
       <AppDrawer />
       <Cards />
+      <EnhancedTable />
     </div>
   );
 }

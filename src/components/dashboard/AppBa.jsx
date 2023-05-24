@@ -130,7 +130,7 @@ export default function AppDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          {["Home", "Bills", "Documents"].map((text, index) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -146,7 +146,9 @@ export default function AppDrawer() {
                     justifyContent: "center",
                   }}
                 >
-                  {index % 2 === 0 ? <HomeIcon /> : <InsertDriveFileIcon />}
+                  {text === "Home" && <HomeIcon />}
+                  {text === "Documents" && <InsertDriveFileIcon />}
+                  {text === "Bills" && <PaymentIcon />}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>

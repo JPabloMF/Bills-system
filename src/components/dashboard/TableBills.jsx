@@ -1,15 +1,33 @@
 import { DataGrid } from "@mui/x-data-grid";
-import "../../style/ContainerTable.css";
+import { Button, Tooltip } from "@mui/material";
+import "../../style/TableBills.css";
 
 function TableBills() {
   const columns = [
-    { field: "name", headerName: "Name", width: 150 },
-    { field: "value", headerName: "Value", width: 150 },
-    { field: "duedate", headerName: "Due date", width: 150 },
+    { field: "name", headerName: "Name", width: 350 },
+    { field: "value", headerName: "Value", width: 330 },
+    { field: "duedate", headerName: "Due date", width: 350 },
     {
       field: "",
-      headerName: "",
-      width: 90,
+      headerName: "Actions",
+      width: 130,
+      disableClickEventBubbling: true,
+      renderCell: (params) => {
+        const onClick = (e) => {
+          console.log(e);
+        };
+
+        return (
+          <Button
+            variant="contained"
+            color="primary"
+            size="small"
+            onClick={onClick}
+          >
+            View details
+          </Button>
+        );
+      },
     },
   ];
 
@@ -21,6 +39,7 @@ function TableBills() {
   ];
   return (
     <div className="ContainerTable">
+      <h4 className="tittleTable">Monthly bills</h4>
       <DataGrid
         rows={rows}
         columns={columns}

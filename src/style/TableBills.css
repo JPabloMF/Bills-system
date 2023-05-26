@@ -1,0 +1,34 @@
+.ContainerTable {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 140px);
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+.MuiButton-contained.MuiButton-containedPrimary {
+  background-color: #33bfff;
+}
+
+.MuiButton-contained.MuiButton-containedPrimary:hover {
+  background-color: #33bfff;
+}
+
+.tittleTable {
+  display: flex;
+  justify-content: flex-start;
+  color: #000000;
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.MuiDataGrid-columnHeaderTitleContainerContent .MuiDataGrid-columnHeaderTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+}
+
+.MuiDataGrid-cell--textLeft .MuiDataGrid-cellContent {
+  font-size: 16px;
+  color: #000000;
+}

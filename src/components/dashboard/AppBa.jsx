@@ -6,7 +6,6 @@ import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
-import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -19,6 +18,8 @@ import ListItemText from "@mui/material/ListItemText";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import HomeIcon from "@mui/icons-material/Home";
 import PaymentIcon from "@mui/icons-material/Payment";
+import AccountMenu from "./AccountMenu";
+import "../../style/AppBa.css";
 
 const drawerWidth = 240;
 
@@ -48,7 +49,6 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   justifyContent: "flex-end",
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
@@ -73,10 +73,6 @@ const AppBar = styled(MuiAppBar, {
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
-  width: drawerWidth,
-  flexShrink: 0,
-  whiteSpace: "nowrap",
-  boxSizing: "border-box",
   ...(open && {
     ...openedMixin(theme),
     "& .MuiDrawer-paper": openedMixin(theme),
@@ -103,19 +99,17 @@ export default function AppDrawer() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar sx={{ bgcolor: "#FFFFFF" }}>
+        <Toolbar sx={{ bgcolor: "#FFFFFF", display: "flex" }}>
           <IconButton
-            color="#000000"
-            aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
             sx={{
-              marginRight: 5,
               ...(open && { display: "none" }),
             }}
           >
             <MenuIcon />
           </IconButton>
+          <AccountMenu />
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -130,7 +124,7 @@ export default function AppDrawer() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Home", "Bills", "Documents"].map((text, index) => (
+          {["Home", "Bills", "Documents"].map((text) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{

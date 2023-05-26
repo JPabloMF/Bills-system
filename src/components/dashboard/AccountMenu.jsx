@@ -23,8 +23,19 @@ function AccountMenu() {
   };
 
   return (
-    <Box>
-      <Typography variant="h6" noWrap component="div" >
+    <Box
+      sx={{
+        display: "flex",
+        position: "absolute",
+        color: "#000000",
+        right: "25px",
+      }}
+    >
+      <Typography
+        noWrap
+        component="div"
+        sx={{ display: "flex", alignItems: "center", textAlign: "center" }}
+      >
         User
       </Typography>
       <IconButton
@@ -44,19 +55,19 @@ function AccountMenu() {
         onClose={handleMenuClose}
       >
         <MenuItem onClick={handleMenuClose}>
-          <ListItemIcon>
+          <ListItemIcon sx={{ color: "#000000" }}>
             <PersonAdd fontSize="small" />
           </ListItemIcon>
           Profile
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
-          <ListItemIcon>
+          <ListItemIcon sx={{ color: "#000000" }}>
             <Settings fontSize="small" />
           </ListItemIcon>
           Settings
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
-          <ListItemIcon>
+          <ListItemIcon sx={{ color: "#000000" }}>
             <Logout fontSize="small" />
           </ListItemIcon>
           Logout

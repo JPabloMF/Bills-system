@@ -19,7 +19,6 @@ import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import HomeIcon from "@mui/icons-material/Home";
 import PaymentIcon from "@mui/icons-material/Payment";
 import AccountMenu from "./AccountMenu";
-import "../../style/AppBa.css";
 
 const drawerWidth = 240;
 
@@ -107,7 +106,7 @@ export default function AppDrawer() {
               ...(open && { display: "none" }),
             }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: "#000000" }} />
           </IconButton>
           <AccountMenu />
         </Toolbar>
@@ -138,6 +137,7 @@ export default function AppDrawer() {
                     minWidth: 0,
                     mr: open ? 3 : "auto",
                     justifyContent: "center",
+                    color: "#000000",
                   }}
                 >
                   {text === "Home" && <HomeIcon />}

@@ -1,5 +1,4 @@
 import SideBar from "./SideBar";
-import AccountMenu from "./AccountMenu";
 import Cards from "./Cards";
 import TableBills from "./TableBills";
 
@@ -9,7 +8,6 @@ function Dashboard() {
   return (
     <>
       <SideBar />
-      <AccountMenu />
       <Cards />
       <TableBills />
     </>

@@ -9,7 +9,6 @@ import Logout from "@mui/icons-material/Logout";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import "../../style/AccountMenu.css";
 
 function AccountMenu() {
   const [anchorEl, setAnchorEl] = useState(null);

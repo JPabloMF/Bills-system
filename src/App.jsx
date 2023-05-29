@@ -1,5 +1,5 @@
 // import Login from "../src/components/login/Login";
-import AppDrawer from "../src/components/dashboard/AppBa";
+import SideBar from "../src/components/dashboard/SideBar";
 import Cards from "../src/components/dashboard/Cards";
 import EnhancedTable from "../src/components/dashboard/TableBills";
 import "./App.css";
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       {/* <Login /> */}
-      <AppDrawer />
+      <SideBar />
       <Cards />
       <EnhancedTable />
     </div>

@@ -6,6 +6,13 @@
   border-radius: 5px;
 }
 
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 button.MuiTab-root:focus {
   outline: none;
 }

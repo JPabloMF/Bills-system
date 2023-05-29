@@ -15,29 +15,31 @@ function Login() {
   };
 
   return (
-    <div className="container_login">
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-          width: "100%",
-        }}
-      >
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
+    <div className="login">
+      <div className="container_login">
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+          }}
         >
-          <Tab label="sign in" />
-          <Tab label="sign up" />
-          <Tab label="forgot password?" />
-        </Tabs>
-        {value === 0 && <SignIn />}
-        {value === 1 && <SignUp />}
-        {value === 2 && <ForgotPassword />}
-      </Box>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            aria-label="basic tabs example"
+          >
+            <Tab label="sign in" />
+            <Tab label="sign up" />
+            <Tab label="forgot password?" />
+          </Tabs>
+          {value === 0 && <SignIn />}
+          {value === 1 && <SignUp />}
+          {value === 2 && <ForgotPassword />}
+        </Box>
+      </div>
     </div>
   );
 }

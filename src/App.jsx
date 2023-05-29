@@ -1,16 +1,11 @@
-// import Login from "../src/components/login/Login";
-import SideBar from "../src/components/dashboard/SideBar";
-import Cards from "../src/components/dashboard/Cards";
-import EnhancedTable from "../src/components/dashboard/TableBills";
+import router from "./router";
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      {/* <Login /> */}
-      <SideBar />
-      <Cards />
-      <EnhancedTable />
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { DataGrid } from "@mui/x-data-grid";
 import { Button, Tooltip } from "@mui/material";
-import "../../style/TableBills.css";
+import "../../../style/TableBills.css";
 
 function TableBills() {
   const columns = [

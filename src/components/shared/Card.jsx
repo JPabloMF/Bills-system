@@ -2,37 +2,32 @@ import * as React from "react";
 import MuiCard from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
-import { red } from "@mui/material/colors";
+import EditIcon from "@mui/icons-material/Edit";
 
-function Card({ width, height, mr, ml, color, children, title }) {
+function Card({ width, height, mr, ml, color, children, title, isEditable }) {
   return (
-    <div>
-      <MuiCard
-        sx={{
-          width,
-          height,
-          mr,
-          ml,
-        }}
-      >
-        <CardActionArea>
-          <CardContent>
-            <Typography
-              gutterBottom
-              variant="h5"
-              minHeight="35px"
-              color="#FFFFFF"
-              bgcolor={color}
-              component="div"
-            >
-              {title}
-            </Typography>
-            {children}
-          </CardContent>
-        </CardActionArea>
-      </MuiCard>
-    </div>
+    <MuiCard
+      sx={{
+        width,
+        height,
+        mr,
+        ml,
+      }}
+    >
+      <CardContent>
+        <Typography
+          variant="h5"
+          minHeight="35px"
+          color="#FFFFFF"
+          bgcolor={color}
+          component="div"
+        >
+          {title}
+          {isEditable && <EditIcon/>}
+        </Typography>
+        {children}
+      </CardContent>
+    </MuiCard>
   );
 }
 

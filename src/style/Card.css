@@ -47,3 +47,16 @@
 .lineCard {
   opacity: 0.4;
 }
+
+.clickDialog {
+  position: absolute;
+  right: 14px;
+  top: 5px;
+  height: 24px;
+  width: 30px;
+}
+.MuiButtonBase-root.MuiButton-sizeMedium  {
+  position: absolute;
+  left: 0px;
+  height: 26px;
+}

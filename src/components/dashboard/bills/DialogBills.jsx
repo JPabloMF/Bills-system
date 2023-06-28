@@ -43,11 +43,6 @@ function BootstrapDialogTitle(props) {
   );
 }
 
-BootstrapDialogTitle.propTypes = {
-  children: PropTypes.node,
-  onClose: PropTypes.func.isRequired,
-};
-
 export default function DialogBills() {
   const [open, setOpen] = React.useState(false);
 
@@ -59,10 +54,8 @@ export default function DialogBills() {
   };
 
   return (
-    <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open dialog
-      </Button>
+    <div className="clickDialog">
+      <Button onClick={handleClickOpen}></Button>
       <BootstrapDialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
@@ -72,23 +65,13 @@ export default function DialogBills() {
           id="customized-dialog-title"
           onClose={handleClose}
         >
-          Modal title
+          Motorcycle parts
         </BootstrapDialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
             Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
             dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
             ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
           </Typography>
         </DialogContent>
         <DialogActions>

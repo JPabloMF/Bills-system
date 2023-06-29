@@ -72,3 +72,7 @@
 .MuiTypography-h6 .MuiTextField-root {
   margin: 0;
 }
+
+.MuiTypography-root.MuiTypography-h6 {
+  padding-top: 47px;
+}

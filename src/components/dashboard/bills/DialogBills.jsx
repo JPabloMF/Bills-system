@@ -4,11 +4,10 @@ import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
+import TextField from "@mui/material/TextField";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -65,18 +64,18 @@ export default function DialogBills() {
           id="customized-dialog-title"
           onClose={handleClose}
         >
-          Motorcycle parts
+          <TextField id="outlined" label="Title" variant="outlined" />
         </BootstrapDialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-        </DialogContent>
+
+        <TextField id="basic" label="Description" variant="outlined" />
+        <TextField id="outlined-basic" label="Total cost" variant="outlined" />
+
         <DialogActions>
+          <Button className="buttonCancel" autoFocus onClick={handleClose}>
+            Cancel
+          </Button>
           <Button autoFocus onClick={handleClose}>
-            Save changes
+            Save
           </Button>
         </DialogActions>
       </BootstrapDialog>

@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import EditIcon from "@mui/icons-material/Edit";
 import DialogBills from "../dashboard/bills/DialogBills";
 
-function Card({ width, height, mr, ml, color, children, title, isEditable , DilogBills }) {
+function Card({ width, height, mr, ml, color, children, title, isEditable }) {
   return (
     <MuiCard
       sx={{
@@ -24,8 +24,8 @@ function Card({ width, height, mr, ml, color, children, title, isEditable , Dilo
           component="div"
         >
           {title}
-          {isEditable && <EditIcon/>}
-          {isEditable && <DialogBills/>}
+          {isEditable && <EditIcon />}
+          {isEditable && <DialogBills />}
         </Typography>
         {children}
       </CardContent>

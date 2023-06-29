@@ -98,8 +98,7 @@ function Bills() {
           color=" #757575 "
           isEditable={true}
         >
-          <DialogBills/>
-            
+          <DialogBills />
           <p className="subtext">Just a helmet</p>
           <p className="subtextHelmet"> </p>
           <hr className="lineCard" />

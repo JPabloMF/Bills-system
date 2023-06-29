@@ -55,8 +55,20 @@
   height: 24px;
   width: 30px;
 }
-.MuiButtonBase-root.MuiButton-sizeMedium  {
+.clickDialog .MuiButtonBase-root {
   position: absolute;
   left: 0px;
   height: 26px;
+}
+
+.buttonCancel.MuiButtonBase-root {
+  color: grey;
+}
+
+.MuiPaper-root .MuiFormControl-root {
+  width: 350px;
+  margin: 16px;
+}
+.MuiTypography-h6 .MuiTextField-root {
+  margin: 0;
 }

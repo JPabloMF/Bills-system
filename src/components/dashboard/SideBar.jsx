@@ -19,6 +19,7 @@ import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import HomeIcon from "@mui/icons-material/Home";
 import PaymentIcon from "@mui/icons-material/Payment";
 import AccountMenu from "./AccountMenu";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
 
@@ -140,9 +141,17 @@ export default function SideBar() {
                     color: "#000000",
                   }}
                 >
-                  {text === "Home" && <HomeIcon />}
+                  {text === "Home" && (
+                    <Link to="/dashboard/home">
+                      <HomeIcon />
+                    </Link>
+                  )}
                   {text === "Documents" && <InsertDriveFileIcon />}
-                  {text === "Bills" && <PaymentIcon />}
+                  {text === "Bills" && (
+                    <Link to="/dashboard/bills">
+                      <PaymentIcon />
+                    </Link>
+                  )}
                 </ListItemIcon>
                 <ListItemText primary={text} sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>

@@ -146,7 +146,11 @@ export default function SideBar() {
                       <HomeIcon />
                     </Link>
                   )}
-                  {text === "Documents" && <InsertDriveFileIcon />}
+                  {text === "Documents" && (
+                    <Link to="/dashboard/documents">
+                      <InsertDriveFileIcon />
+                    </Link>
+                  )}
                   {text === "Bills" && (
                     <Link to="/dashboard/bills">
                       <PaymentIcon />

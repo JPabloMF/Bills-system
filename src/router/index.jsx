@@ -3,6 +3,7 @@ import Login from "../components/login/Login";
 import Dashboard from "../components/dashboard/Dashboard";
 import Home from "../components/dashboard/home";
 import Bills from "../components/dashboard/bills";
+import Documents from "../components/dashboard/documents";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/bills",
         element: <Bills />,
+      },
+      {
+        path: "/dashboard/documents",
+        element: <Documents />,
       },
     ],
   },

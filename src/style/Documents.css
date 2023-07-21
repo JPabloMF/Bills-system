@@ -1,0 +1,73 @@
+.containerInputs {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 17px;
+}
+
+.input {
+  margin-right: 20px;
+  height: 40px;
+  padding: 8px;
+}
+
+.inputName {
+  width: 350px;
+  margin-left: 17px;
+}
+.inputDate {
+  width: 270px;
+}
+.inputValue {
+  width: 320px;
+}
+
+.textInpunts {
+  margin-top: 5px;
+}
+
+.containerProducts {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 37px;
+  margin-top: 30px;
+}
+
+.subTitle {
+  color: #8c8c8c;
+}
+
+.subSegment {
+  background-color: #cccbcb;
+  height: 42px;
+  margin-top: 4px;
+  color: #757575;
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.containerInputs .MuiSvgIcon-fontSizeMedium {
+  position: absolute;
+  right: 557px;
+  top: 174px;
+}
+
+.iconDown1 {
+  position: absolute;
+  top: 381px;
+  left: 325px;
+}
+.iconDown2 {
+  position: absolute;
+  top: 381px;
+  left: 648px;
+}
+.iconDown3 {
+  position: absolute;
+  top: 381px;
+  right: 375px;
+}
+.iconDown4 {
+  position: absolute;
+  top: 381px;
+  right: 52px;
+}

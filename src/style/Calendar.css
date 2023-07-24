@@ -1,0 +1,54 @@
+.subdivisions {
+  position: relative;
+  border: 1px solid #bebebe;
+  width: 89px;
+  height: 34px;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+.firstColor {
+  position: absolute;
+  height: 32px;
+  width: 36px;
+  border-radius: 3px;
+}
+.subtitle {
+  position: absolute;
+  font-size: 15px;
+  left: 45px;
+  top: 5px;
+}
+.medium {
+  width: 109px;
+}
+.color1 {
+  background-color: #f44336;
+}
+.color2 {
+  background-color: #f1c40f;
+}
+.color3 {
+  background-color: #33eb91;
+}
+.measurementTitle {
+  margin-right: 15px;
+  font-size: 23px;
+}
+.containerMeasurement {
+  display: flex;
+}
+
+.containerCards {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.month {
+  margin-top: 17px;
+  margin-bottom: 12px;
+}
+
+.containerCards .MuiPaper-root{
+    text-align: center;
+    margin-right: 30px;
+}

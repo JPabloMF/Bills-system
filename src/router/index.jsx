@@ -4,6 +4,7 @@ import Dashboard from "../components/dashboard/Dashboard";
 import Home from "../components/dashboard/home";
 import Bills from "../components/dashboard/bills";
 import Documents from "../components/dashboard/documents";
+import Calendar from "../components/dashboard/calendar"
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard/documents",
         element: <Documents />,
+      },
+      {
+        path: "/dashboard/calendar",
+        element: <Calendar />,
       },
     ],
   },

@@ -19,6 +19,7 @@ import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import HomeIcon from "@mui/icons-material/Home";
 import PaymentIcon from "@mui/icons-material/Payment";
 import AccountMenu from "./AccountMenu";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -124,7 +125,7 @@ export default function SideBar() {
         </DrawerHeader>
         <Divider />
         <List>
-          {["Home", "Bills", "Documents"].map((text) => (
+          {["Home", "Bills", "Documents", "Calendar"].map((text) => (
             <ListItem key={text} disablePadding sx={{ display: "block" }}>
               <ListItemButton
                 sx={{
@@ -136,7 +137,7 @@ export default function SideBar() {
                 <ListItemIcon
                   sx={{
                     minWidth: 0,
-                    mr: open ? 3 : "auto",
+                    mr: open ? 4 : "auto",
                     justifyContent: "center",
                     color: "#000000",
                   }}
@@ -154,6 +155,11 @@ export default function SideBar() {
                   {text === "Bills" && (
                     <Link to="/dashboard/bills">
                       <PaymentIcon />
+                    </Link>
+                  )}
+                  {text === "Calendar" && (
+                    <Link to="/dashboard/calendar">
+                      <CalendarTodayIcon />
                     </Link>
                   )}
                 </ListItemIcon>

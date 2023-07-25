@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import DialogDocuments from "../../shared/DialogDocuments";
 import "../../../style/Documents.css";
 
 function index() {
@@ -43,6 +44,7 @@ function index() {
             height="160px"
             color="#757575"
             isEditable={true}
+            dialog={<DialogDocuments />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">07/17/2023</span>
@@ -62,6 +64,7 @@ function index() {
             height="160px"
             color="#757575"
             isEditable={true}
+            dialog={<DialogDocuments />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">07/17/2023</span>
@@ -81,6 +84,7 @@ function index() {
             height="160px"
             color="#757575"
             isEditable={true}
+            dialog={<DialogDocuments />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">07/17/2023</span>
@@ -100,6 +104,7 @@ function index() {
             height="160px"
             color="#757575"
             isEditable={true}
+            dialog={<DialogDocuments />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">07/17/2023</span>

@@ -6,5 +6,5 @@
 
 body {
   display: inherit !important;
-  background-color: #eeeeee;
+  background-color: #eeeeee !important;
 }

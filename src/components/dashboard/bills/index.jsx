@@ -9,7 +9,7 @@ import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
-import DialogBills from "./DialogBills";
+import DialogBills from "../../shared/DialogBills";
 import "../../../style/Card.css";
 
 function Bills() {
@@ -82,6 +82,7 @@ function Bills() {
           height="150px"
           color=" #757575 "
           isEditable={true}
+          dialog={<DialogBills />}
         >
           <p className="subtext">
             I bought a couple of tyres,also bought an air filter and detailing
@@ -97,8 +98,8 @@ function Bills() {
           height="150px"
           color=" #757575 "
           isEditable={true}
+          dialog={<DialogBills />}
         >
-          <DialogBills />
           <p className="subtext">Just a helmet</p>
           <p className="subtextHelmet"> </p>
           <hr className="lineCard" />

@@ -1,10 +1,18 @@
 import Box from "@mui/material/Box";
 import Card from "../../shared/Card";
 import "../../../style/Calendar.css";
+import DialogCalendar from "../../shared/DialogCalendar";
 export default function index() {
   return (
     <>
-      <Box marginLeft="100px">
+      <Box
+        marginLeft="100px"
+        marginRight="40px"
+        bgcolor="#FFFFFF"
+        padding="25px"
+        boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
+        borderRadius="5px"
+      >
         <div className="containerMeasurement">
           <p className="measurementTitle">Priority: </p>
           <div className="subdivisions">
@@ -29,6 +37,7 @@ export default function index() {
             height="140px"
             color="#F44336"
             isEditable={true}
+            dialog={<DialogCalendar />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/22/2023</span>
@@ -45,6 +54,7 @@ export default function index() {
             height="140px"
             color="#F44336"
             isEditable={true}
+            dialog={<DialogCalendar />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/13/2023</span>
@@ -61,6 +71,7 @@ export default function index() {
             height="140px"
             color="#33EB91"
             isEditable={true}
+            dialog={<DialogCalendar />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/17/2023</span>
@@ -80,6 +91,7 @@ export default function index() {
             height="140px"
             color="#F44336"
             isEditable={true}
+            dialog={<DialogCalendar />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">02/13/2023</span>
@@ -96,6 +108,7 @@ export default function index() {
             height="140px"
             color="#f1c40f"
             isEditable={true}
+            dialog={<DialogCalendar />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">02/17/2023</span>

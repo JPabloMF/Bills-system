@@ -37,7 +37,7 @@ export default function index() {
             height="140px"
             color="#F44336"
             isEditable={true}
-            dialog={<DialogCalendar />}
+            dialog={<DialogCalendar title="Edit Moto taxes" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/22/2023</span>
@@ -54,7 +54,7 @@ export default function index() {
             height="140px"
             color="#F44336"
             isEditable={true}
-            dialog={<DialogCalendar />}
+            dialog={<DialogCalendar title="Edit Apartment due" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/13/2023</span>
@@ -71,7 +71,7 @@ export default function index() {
             height="140px"
             color="#33EB91"
             isEditable={true}
-            dialog={<DialogCalendar />}
+            dialog={<DialogCalendar title="Edit clothes" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/17/2023</span>
@@ -91,7 +91,7 @@ export default function index() {
             height="140px"
             color="#F44336"
             isEditable={true}
-            dialog={<DialogCalendar />}
+            dialog={<DialogCalendar title="Edit Apartment due" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">02/13/2023</span>
@@ -103,12 +103,12 @@ export default function index() {
             </div>
           </Card>
           <Card
-            title="Moto accessorios"
+            title="Moto accessorio"
             width="22%"
             height="140px"
             color="#f1c40f"
             isEditable={true}
-            dialog={<DialogCalendar />}
+            dialog={<DialogCalendar title="Edit Moto accessorios" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">02/17/2023</span>

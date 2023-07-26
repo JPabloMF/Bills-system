@@ -9,6 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import TextField from "@mui/material/TextField";
 
+
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
     padding: theme.spacing(2),
@@ -42,7 +43,7 @@ function BootstrapDialogTitle(props) {
   );
 }
 
-export default function DialogDocuments() {
+export default function DialogDocuments({ title }) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -60,7 +61,11 @@ export default function DialogDocuments() {
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        documents
+        <h3 className="titleModal">{title}</h3>
+        <TextField id="basic" label="Name" variant="outlined" />
+        <TextField id="basicO" label="Date" variant="outlined" />
+        <TextField id="outlined" label="Value" variant="outlined" />
+        <TextField id="outlined-basic" label="Document" variant="outlined" />
         <DialogActions>
           <Button className="buttonCancel" autoFocus onClick={handleClose}>
             Cancel

@@ -44,7 +44,7 @@ function index() {
             height="160px"
             color="#757575"
             isEditable={true}
-            dialog={<DialogDocuments />}
+            dialog={<DialogDocuments title=" Edit Dinner fest" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">07/17/2023</span>
@@ -64,7 +64,7 @@ function index() {
             height="160px"
             color="#757575"
             isEditable={true}
-            dialog={<DialogDocuments />}
+            dialog={<DialogDocuments title=" Edit Claro bill" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">07/17/2023</span>
@@ -84,7 +84,7 @@ function index() {
             height="160px"
             color="#757575"
             isEditable={true}
-            dialog={<DialogDocuments />}
+            dialog={<DialogDocuments title=" Edit Moto parts" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">07/17/2023</span>
@@ -104,7 +104,7 @@ function index() {
             height="160px"
             color="#757575"
             isEditable={true}
-            dialog={<DialogDocuments />}
+            dialog={<DialogDocuments title=" Edit Clothes" />}
           >
             <p className="secondaryText">
               Date: <span className="subTitle">07/17/2023</span>

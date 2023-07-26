@@ -71,3 +71,19 @@
   top: 381px;
   right: 52px;
 }
+
+.titleModal {
+  padding-left: 17px;
+  padding-top: 9px;
+  font-size: 25px;
+}
+
+.cloudDown {
+  position: absolute;
+  bottom: 85px;
+}
+
+.titleModal {
+  padding-left: 17px;
+  padding-top: 11px;
+}

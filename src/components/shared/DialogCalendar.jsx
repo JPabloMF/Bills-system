@@ -42,7 +42,7 @@ function BootstrapDialogTitle(props) {
   );
 }
 
-export default function DialogCalendar() {
+export default function DialogCalendar({ title }) {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -60,7 +60,25 @@ export default function DialogCalendar() {
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        Calendar
+        <h3 className="titleModal">{title}</h3>
+        <TextField id="basic" label="Name" variant="outlined" />
+        <p className="subtitleMeasurement">Priority </p>
+        <div className="containerMeasurement measurement">
+          <div className="subdivisions divisionsModal">
+            <div className="firstColor color1"></div>
+            <p className="subtitle">High</p>
+          </div>
+          <div className="subdivisions medium ">
+            <div className="firstColor color2"></div>
+            <p className="subtitle">Medium</p>
+          </div>
+          <div className="subdivisions divisionsModal">
+            <div className="firstColor color3"></div>
+            <p className="subtitle">Low</p>
+          </div>
+        </div>
+        <TextField id="outlined" label="Date" variant="outlined" />
+        <TextField id="outlined-basic" label="Value" variant="outlined" />
 
         <DialogActions>
           <Button className="buttonCancel" autoFocus onClick={handleClose}>

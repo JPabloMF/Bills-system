@@ -8,7 +8,10 @@ import DialogActions from "@mui/material/DialogActions";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 import TextField from "@mui/material/TextField";
-
+import InputAdornment from "@mui/material/InputAdornment";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import FileUploadIcon from "@mui/icons-material/FileUpload";
+import "../../style/Documents.css";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -65,7 +68,26 @@ export default function DialogDocuments({ title }) {
         <TextField id="basic" label="Name" variant="outlined" />
         <TextField id="basicO" label="Date" variant="outlined" />
         <TextField id="outlined" label="Value" variant="outlined" />
-        <TextField id="outlined-basic" label="Document" variant="outlined" />
+        <TextField
+          id="outlined-basic"
+          label="Document"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <CloudDownloadIcon />
+              </InputAdornment>
+            ),
+          }}
+          variant="outlined"
+        />
+        <Button
+          variant="contained"
+          component="label"
+          startIcon={<FileUploadIcon />}
+        >
+          Upload Document
+          <input type="file" hidden />
+        </Button>
         <DialogActions>
           <Button className="buttonCancel" autoFocus onClick={handleClose}>
             Cancel

@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import "../../../style/Cards.css";
 
-function Cards() {
+function Cards({ cardData }) {
   return (
     <div className="containerCards">
       {" "}
@@ -34,7 +34,7 @@ function Cards() {
               Latest bill
             </Typography>
             <Typography variant="body2" fontSize={20} color="#000000">
-              Hamburger $15.400
+              {cardData.latestBill}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -52,7 +52,7 @@ function Cards() {
               Saved money
             </Typography>
             <Typography variant="body2" fontSize={20} color="#000000">
-              $250.000
+              {cardData.savedMoney}
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -70,7 +70,7 @@ function Cards() {
               Free money
             </Typography>
             <Typography variant="body2" fontSize={20} color="#000000">
-              $25.000
+              {cardData.freeMoney}
             </Typography>
           </CardContent>
         </CardActionArea>

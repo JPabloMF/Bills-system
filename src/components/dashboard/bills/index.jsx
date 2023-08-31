@@ -10,9 +10,18 @@ import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import CreditCardIcon from "@mui/icons-material/CreditCard";
 import DialogBills from "../../shared/DialogBills";
+import { useState, useEffect } from "react";
 import "../../../style/Card.css";
 
 function Bills() {
+  const [data, setData] = useState();
+
+  useEffect(() => {
+    fetch("https://data-bills-system-production.up.railway.app/bills")
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  }, []);
+
   return (
     <>
       <Box
@@ -28,14 +37,14 @@ function Bills() {
           color="#00B0FF"
         >
           <p className="secondaryText">
-            <strong>25</strong> Expenses
+            <strong>{data?.amountOfExpenses}</strong> Expenses
           </p>
         </Card>
         <Card title="Available money" width="28%" height="98px" color="#33EB91">
-          <p className="secondaryText">$250.000</p>
+          <p className="secondaryText">{data?.availableMoney}</p>
         </Card>
         <Card title="Saved money" width="28%" height="98px" color=" #F44336 ">
-          <p className="secondaryText">$0</p>
+          <p className="secondaryText">{data?.savedMoney}</p>
         </Card>
       </Box>
       <Box

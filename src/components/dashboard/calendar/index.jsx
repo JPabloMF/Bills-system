@@ -12,6 +12,7 @@ export default function index() {
         padding="25px"
         boxShadow="0px 4px 4px 0px rgba(0, 0, 0, 0.25)"
         borderRadius="5px"
+        className="prueba"
       >
         <div className="containerMeasurement">
           <p className="measurementTitle">Priority: </p>
@@ -38,6 +39,7 @@ export default function index() {
             color="#F44336"
             isEditable={true}
             dialog={<DialogCalendar title="Edit Moto taxes" />}
+            className="cardsTitle"
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/22/2023</span>
@@ -55,6 +57,7 @@ export default function index() {
             color="#F44336"
             isEditable={true}
             dialog={<DialogCalendar title="Edit Apartment due" />}
+            className="cardsTitle"
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/13/2023</span>
@@ -72,6 +75,7 @@ export default function index() {
             color="#33EB91"
             isEditable={true}
             dialog={<DialogCalendar title="Edit clothes" />}
+            className="cardsTitle"
           >
             <p className="secondaryText">
               Date: <span className="subTitle">01/17/2023</span>
@@ -92,6 +96,7 @@ export default function index() {
             color="#F44336"
             isEditable={true}
             dialog={<DialogCalendar title="Edit Apartment due" />}
+            className="cardsTitle"
           >
             <p className="secondaryText">
               Date: <span className="subTitle">02/13/2023</span>
@@ -109,6 +114,7 @@ export default function index() {
             color="#f1c40f"
             isEditable={true}
             dialog={<DialogCalendar title="Edit Moto accessorios" />}
+            className="cardsTitle"
           >
             <p className="secondaryText">
               Date: <span className="subTitle">02/17/2023</span>

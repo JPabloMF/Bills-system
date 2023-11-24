@@ -62,6 +62,49 @@
   font-size: 14px;
 }
 
-.divisionsModal{
+.divisionsModal {
   width: 98px;
+}
+@media screen and (max-width: 640px) {
+  .measurementTitle {
+    margin-right: 3px;
+    font-size: 15px;
+  }
+
+  div.App .MuiBox-root.prueba {
+    width: 76%;
+    margin-left: 71px;
+    padding: 16px;
+  }
+  .subdivisions {
+    width: 256px;
+    height: 19px;
+    margin-right: 4px;
+  }
+  .firstColor {
+    height: 17px;
+    width: 17px;
+  }
+  .subtitle {
+    font-size: 13px;
+    left: 20px;
+    top: -1px;
+  }
+  .medium {
+    width: 365px;
+  }
+  .month {
+    font-size: 19px;
+  }
+  .containerCards {
+    margin-left: 0;
+  }
+  .MuiPaper-root.MuiPaper-elevation.cardsTitle {
+    width: 96%;
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  .MuiTypography-h5 .MuiSvgIcon-root{
+    right: 2px;
+  }
 }

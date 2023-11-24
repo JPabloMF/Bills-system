@@ -10,6 +10,7 @@ function Cards({ cardData }) {
     <div className="containerCards">
       {" "}
       <Card
+        className="cardsHome"
         sx={{
           minWidth: "33%",
           minHeight: 98,
@@ -39,7 +40,10 @@ function Cards({ cardData }) {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ minWidth: "26%", minHeight: 98, mr: 5, textAlign: "center" }}>
+      <Card
+        className="cardsHome"
+        sx={{ minWidth: "26%", minHeight: 98, mr: 5, textAlign: "center" }}
+      >
         <CardActionArea>
           <CardContent>
             <Typography
@@ -57,7 +61,10 @@ function Cards({ cardData }) {
           </CardContent>
         </CardActionArea>
       </Card>
-      <Card sx={{ minWidth: "26%", minHeight: 98, mr: 5, textAlign: "center" }}>
+      <Card
+        className="cardsHome"
+        sx={{ minWidth: "26%", minHeight: 98, mr: 5, textAlign: "center" }}
+      >
         <CardActionArea>
           <CardContent>
             <Typography

@@ -14,6 +14,7 @@ function Card({
   title,
   isEditable,
   dialog,
+  className
 }) {
   return (
     <MuiCard
@@ -23,6 +24,7 @@ function Card({
         mr,
         ml,
       }}
+      className={className}
     >
       <CardContent>
         <Typography

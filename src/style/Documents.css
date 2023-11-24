@@ -88,7 +88,55 @@
   padding-top: 11px;
 }
 
-.MuiButton-contained.MuiButtonBase-root {
+.MuiButton-contained {
   margin-left: 17px;
   margin-right: 17px;
+}
+
+@media screen and (max-width: 640px) {
+  .MuiPaper-root.MuiPaper-elevation1.MuiCard-root {
+    width: 79%;
+    height: auto;
+    margin-left: 49px;
+  }
+  .containerInputs {
+    flex-wrap: wrap;
+  }
+  .textInpunts {
+    margin-top: 0px;
+    margin-bottom: 9px;
+  }
+  .inputName {
+    margin-left: 0px;
+    margin-bottom: 10px;
+  }
+  .inputDate {
+    margin-bottom: 10px;
+  }
+  .MuiButton-contained.MuiButton-containedPrimary {
+    margin-top: 10px;
+  }
+  .containerProducts {
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-right: 49px;
+  }
+  .containerProducts .MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded {
+    position: relative;
+    width: 80%;
+    height: 160px;
+    margin-top: 22px;
+  }
+  .subSegment {
+    position: relative;
+    width: 100%;
+  }
+  .subSegment .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium {
+    top: 7px;
+    left: 227px;
+  }
+  .MuiInputBase-root.MuiOutlinedInput-root {
+    width: 75%;
+  }
 }

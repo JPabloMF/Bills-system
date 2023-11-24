@@ -36,8 +36,22 @@
 
 .icons {
   display: flex;
+  padding: 5px;
   padding-left: 12px;
-  margin-top: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.icons.exist.selected,
+.icons.exist:hover {
+  background-color: rgb(222, 222, 222);
+}
+
+.icons:not(.exist) {
+  color: gray;
+  cursor: not-allowed;
+  user-select: none;
+  pointer-events: none;
 }
 
 .icon {
@@ -76,4 +90,3 @@
 .MuiTypography-root.MuiTypography-h6 {
   padding-top: 47px;
 }
-

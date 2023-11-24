@@ -15,12 +15,27 @@ import "../../../style/Card.css";
 
 function Bills() {
   const [data, setData] = useState();
+  const [selectedBill, setSelectedBill] = useState();
 
   useEffect(() => {
     fetch("https://data-bills-system-production.up.railway.app/bills")
       .then((response) => response.json())
-      .then((json) => setData(json));
+      .then((json) => {
+        setData(json);
+        setSelectedBill(Object.keys(json.expenses)[0]);
+      });
   }, []);
+
+  const handleSelectBill = (bill) => setSelectedBill(bill);
+
+  const hasExpense = (expenseName) => {
+    if (data) {
+      return expenseName in data?.expenses ? "exist" : "";
+    }
+  };
+
+  const isExpenseSelected = (expenseName) =>
+    expenseName === selectedBill ? "selected" : "";
 
   return (
     <>
@@ -56,64 +71,98 @@ function Bills() {
       >
         <Card title="Category" width="20%" height="360px" color=" #00B0FF ">
           <ul className="listIcons">
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense("home")} ${isExpenseSelected(
+                "home"
+              )}`}
+              onClick={() => handleSelectBill("home")}
+            >
               <HomeIcon className="icon" /> Home
             </li>
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense(
+                "transportation"
+              )} ${isExpenseSelected("transportation")}`}
+              onClick={() => handleSelectBill("transportation")}
+            >
               <PedalBikeIcon className="icon" /> Transportation
             </li>
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense("feeding")} ${isExpenseSelected(
+                "feeding"
+              )}`}
+              onClick={() => handleSelectBill("feeding")}
+            >
               <RestaurantIcon className="icon" /> Feeding
             </li>
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense("fashion")} ${isExpenseSelected(
+                "fashion"
+              )}`}
+              onClick={() => handleSelectBill("fashion")}
+            >
               <LocalMallIcon className="icon" /> Fashion
             </li>
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense("health")} ${isExpenseSelected(
+                "health"
+              )}`}
+              onClick={() => handleSelectBill("health")}
+            >
               <SpaIcon className="icon" /> Health and wellness
             </li>
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense(
+                "entertainment"
+              )} ${isExpenseSelected("entertainment")}`}
+              onClick={() => handleSelectBill("entertainment")}
+            >
               <SportsEsportsIcon className="icon" /> Entertainment
             </li>
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense("education")} ${isExpenseSelected(
+                "education"
+              )}`}
+              onClick={() => handleSelectBill("education")}
+            >
               <AutoStoriesIcon className="icon" /> Education
             </li>
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense("taxes")} ${isExpenseSelected(
+                "taxes"
+              )}`}
+              onClick={() => handleSelectBill("taxes")}
+            >
               <InsertDriveFileIcon className="icon" /> Taxes
             </li>
-            <li className="icons">
+            <li
+              className={`icons ${hasExpense("bank")} ${isExpenseSelected(
+                "bank"
+              )}`}
+              onClick={() => handleSelectBill("bank")}
+            >
               <CreditCardIcon className="icon" /> Bank commitments
             </li>
           </ul>
         </Card>
-        <Card
-          title="Motorcycle parts"
-          width="32%"
-          height="150px"
-          color=" #757575 "
-          isEditable={true}
-          dialog={<DialogBills />}
-        >
-          <p className="subtext">
-            I bought a couple of tyres,also bought an air filter and detailing
-            stuff
-          </p>
-          <p className="subtext"></p>
-          <hr className="lineCard" />
-          <strong>Total cost:</strong>$350.000
-        </Card>
-        <Card
-          title="Helmet"
-          width="32%"
-          height="150px"
-          color=" #757575 "
-          isEditable={true}
-          dialog={<DialogBills />}
-        >
-          <p className="subtext">Just a helmet</p>
-          <p className="subtextHelmet"> </p>
-          <hr className="lineCard" />
-          <strong>Total cost:</strong>$1.550.000
-        </Card>
+        {data &&
+          data?.expenses[selectedBill].map((expense, index) => (
+            <Card
+              key={index}
+              title={expense.name}
+              width="32%"
+              height="150px"
+              color=" #757575 "
+              isEditable={true}
+              dialog={<DialogBills />}
+            >
+              <p className="subtext">{expense.description}</p>
+              <p className="subtext"></p>
+              <hr className="lineCard" />
+              <strong>Total cost:</strong>
+              {expense.total}
+            </Card>
+          ))}
       </Box>
     </>
   );

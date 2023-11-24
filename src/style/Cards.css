@@ -31,25 +31,3 @@
 .MuiTypography-root .MuiButton-containedSecondary:hover {
   background-color: #33eb91;
 }
-@media screen and (max-width: 640px) {
-  .containerCards {
-    flex-wrap: wrap;
-    margin-left: 30px;
-  }
-  .containerCards .MuiPaper-root.MuiPaper-elevation {
-    width: 77%;
-    margin-top: 20px;
-  }
-  .containerCards .MuiButtonBase-root.MuiButton-root {
-    right: 8px;
-    height: 29px;
-    top: 2.5px;
-    width: 92px;
-    font-size: 10px;
-    line-height: 0.95;
-  }
-  .MuiPaper-root.MuiPaper-elevation1.MuiCard-root.cardsHome {
-    margin-left: 75px;
-    margin-right: 19px;
-  }
-}

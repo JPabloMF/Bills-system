@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Cards from "./Cards";
+import "../../../style/Home.css";
 import TableBills from "./TableBills";
 
 function Home() {

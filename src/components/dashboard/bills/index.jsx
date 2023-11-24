@@ -12,6 +12,7 @@ import CreditCardIcon from "@mui/icons-material/CreditCard";
 import DialogBills from "../../shared/DialogBills";
 import { useState, useEffect } from "react";
 import "../../../style/Card.css";
+import "../../../style/Bills.css";
 
 function Bills() {
   const [data, setData] = useState();
@@ -40,12 +41,14 @@ function Bills() {
   return (
     <>
       <Box
+        className="containerBills"
         ml="64px"
         display="flex"
         justifyContent="space-evenly"
         textAlign="center"
       >
         <Card
+          className="cardsBills"
           title="Amount of expenses"
           width="28%"
           height="98px"
@@ -55,21 +58,40 @@ function Bills() {
             <strong>{data?.amountOfExpenses}</strong> Expenses
           </p>
         </Card>
-        <Card title="Available money" width="28%" height="98px" color="#33EB91">
+        <Card
+          className="cardsBills"
+          title="Available money"
+          width="28%"
+          height="98px"
+          color="#33EB91"
+        >
           <p className="secondaryText">{data?.availableMoney}</p>
         </Card>
-        <Card title="Saved money" width="28%" height="98px" color=" #F44336 ">
+        <Card
+          className="cardsBills"
+          title="Saved money"
+          width="28%"
+          height="98px"
+          color=" #F44336 "
+        >
           <p className="secondaryText">{data?.savedMoney}</p>
         </Card>
       </Box>
       <Box
+        className="containerCategory"
         ml="64px"
         display="flex"
         mt="32px"
         justifyContent="space-evenly"
         textAlign="center"
       >
-        <Card title="Category" width="20%" height="360px" color=" #00B0FF ">
+        <Card
+          className="cardsBills"
+          title="Category"
+          width="20%"
+          height="360px"
+          color=" #00B0FF "
+        >
           <ul className="listIcons">
             <li
               className={`icons ${hasExpense("home")} ${isExpenseSelected(
@@ -148,6 +170,7 @@ function Bills() {
         {data &&
           data?.expenses[selectedBill].map((expense, index) => (
             <Card
+              className="cardsBills"
               key={index}
               title={expense.name}
               width="32%"

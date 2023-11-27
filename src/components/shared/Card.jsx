@@ -34,7 +34,7 @@ function Card({
           bgcolor={color}
           component="div"
           noWrap
-          paddingX={1}
+          paddingX={1.5}
         >
           {title}
           {isEditable && dialog ? <EditIcon /> : null}

@@ -28,12 +28,14 @@ function index() {
               className=" input inputDate"
               placeholder="Documents date"
             />
-            <CalendarTodayIcon />
-            <input
-              type="text"
-              className=" input inputValue"
-              placeholder="Documents value (range)"
-            />
+            <div className="calendarInput">
+              <CalendarTodayIcon className="icon"/>
+              <input
+                type="text"
+                className=" input inputValue"
+                placeholder="Documents value (range)"
+              />
+            </div>
             <Button variant="contained">Apply filters</Button>
           </div>
         </Card>
@@ -55,7 +57,7 @@ function index() {
               </p>
             </div>
             <div className="subSegment">
-              dinner-fest.pdf <CloudDownloadIcon className="iconDown1" />
+              dinner-fest.pdf <CloudDownloadIcon className="iconDown" />
             </div>
           </Card>
           <Card
@@ -75,7 +77,7 @@ function index() {
               </p>
             </div>
             <div className="subSegment">
-              claro-bill.pdf <CloudDownloadIcon className="iconDown2" />
+              claro-bill.pdf <CloudDownloadIcon className="iconDown" />
             </div>
           </Card>
           <Card
@@ -95,7 +97,7 @@ function index() {
               </p>
             </div>
             <div className="subSegment">
-              parts.pdf <CloudDownloadIcon className="iconDown3" />
+              parts.pdf <CloudDownloadIcon className="iconDown" />
             </div>
           </Card>
           <Card
@@ -115,7 +117,7 @@ function index() {
               </p>
             </div>
             <div className="subSegment">
-              clothes.pdf <CloudDownloadIcon className="iconDown4" />
+              clothes.pdf <CloudDownloadIcon className="iconDown" />
             </div>
           </Card>
         </div>

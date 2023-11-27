@@ -43,33 +43,23 @@
   color: #757575;
   font-size: 23px;
   font-weight: 300;
+  position: relative;
 }
 
-.containerInputs .MuiSvgIcon-fontSizeMedium {
+.containerInputs .calendarInput {
+  position: relative;
+}
+.containerInputs .calendarInput .icon {
   position: absolute;
-  right: 557px;
-  top: 174px;
+  top: 8px;
+  right: 20px;
+  color: white;
 }
 
-.iconDown1 {
+.iconDown {
   position: absolute;
-  top: 381px;
-  left: 325px;
-}
-.iconDown2 {
-  position: absolute;
-  top: 381px;
-  left: 648px;
-}
-.iconDown3 {
-  position: absolute;
-  top: 381px;
-  right: 375px;
-}
-.iconDown4 {
-  position: absolute;
-  top: 381px;
-  right: 52px;
+  top: 5px;
+  right: 10px;
 }
 
 .titleModal {

@@ -81,12 +81,11 @@ function SignUp() {
         {formik.errors?.repeatpassword ? (
           <Alert severity="error">{formik.errors.repeatpassword}</Alert>
         ) : null}
-        <Stack spacing={2} direction="row">
-          {" "}
-          <Button type="submit" variant="contained">
+        <Box mt={2}>
+          <Button type="submit" fullWidth variant="contained">
             sign up
           </Button>
-        </Stack>
+        </Box>
       </form>
     </Box>
   );

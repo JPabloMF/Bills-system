@@ -47,12 +47,12 @@ function ForgotPassword() {
         {formik.errors?.email ? (
           <Alert severity="error">{formik.errors.email}</Alert>
         ) : null}
-        <Stack spacing={2} direction="row">
+        <Box mt={2}>
           {" "}
-          <Button type="submit" variant="contained">
+          <Button type="submit" fullWidth variant="contained">
             recover password
           </Button>
-        </Stack>
+        </Box>
       </form>
     </Box>
   );

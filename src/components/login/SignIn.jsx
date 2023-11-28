@@ -67,12 +67,11 @@ function SignIn() {
           {formik.errors?.password ? (
             <Alert severity="error">{formik.errors.password}</Alert>
           ) : null}
-          <Stack spacing={2} direction="row">
-            {" "}
-            <Button type="submit" variant="contained">
+          <Box mt={2}>
+            <Button type="submit" fullWidth variant="contained">
               sign in
             </Button>
-          </Stack>
+          </Box>
         </form>
       </Box>
     </div>
